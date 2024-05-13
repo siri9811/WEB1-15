@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WEB1 - JS</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1><a href="index.html">WEB</a></h1>
-        <ol>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-            <li><a href="3.html">Javascript</a></li>
-        </ol>
-        <h1>JS</h1>
-        <p>JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior.[10]
-
-            Web browsers have a dedicated JavaScript engine that executes the client code. These engines are also utilized in some servers and a variety of apps. The most popular runtime system for non-browser usage is Node.js.
-            
-            JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[11] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
-            
-            The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
-            
-            Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
-        </p>
-    </body>
+  <head>
+    <title>WEB1 - JS</title>
+    <meta charset="utf-8" />
+  </head>
+  <body data-mode="day">
+    <h1><a href="index.html">WEB</a></h1>
+    <input
+      type="button"
+      value="night"
+      onclick=" 
+    document.querySelector('body').style.backgroundColor ='black';
+    document.querySelector('body').style.color ='white';
+    "
+    />
+    <input
+      type="button"
+      value="day"
+      onclick="
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color ='black';
+    "
+    />
+    <input
+      type="button"
+      value="toggle"
+      onclick="
+    if(document.querySelector('body').dataset.mode === 'day'){
+      document.querySelector('body').style.backgroundColor ='black';
+      document.querySelector('body').style.color ='white';
+      document.querySelector('body').dataset.mode = 'night';
+    } else {
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color ='black';
+      document.querySelector('body').dataset.mode = 'day';
+    }
+    "
+    />
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">Javascript</a></li>
+    </ol>
+    <h1>JS</h1>
+    <p>
+      JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming
+      language and core technology of the Web, alongside HTML and CSS. 99% of
+      websites use JavaScript on the client side for webpage behavior.[10] Web
+      browsers have a dedicated JavaScript engine that executes the client code.
+      These engines are also utilized in some servers and a variety of apps. The
+      most popular runtime system for non-browser usage is Node.js. JavaScript
+      is a high-level, often just-in-time compiled language that conforms to the
+      ECMAScript standard.[11] It has dynamic typing, prototype-based
+      object-orientation, and first-class functions. It is multi-paradigm,
+      supporting event-driven, functional, and imperative programming styles. It
+      has application programming interfaces (APIs) for working with text,
+      dates, regular expressions, standard data structures, and the Document
+      Object Model (DOM). The ECMAScript standard does not include any
+      input/output (I/O), such as networking, storage, or graphics facilities.
+      In practice, the web browser or other runtime system provides JavaScript
+      APIs for I/O. Although Java and JavaScript are similar in name, syntax,
+      and respective standard libraries, the two languages are distinct and
+      differ greatly in design.
+    </p>
+  </body>
 </html>
