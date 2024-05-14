@@ -7,35 +7,27 @@
   <body data-mode="day">
     <h1><a href="index.html">WEB</a></h1>
     <input
+      id="night_day"
       type="button"
       value="night"
       onclick=" 
-    document.querySelector('body').style.backgroundColor ='black';
-    document.querySelector('body').style.color ='white';
-    "
-    />
-    <input
-      type="button"
-      value="day"
-      onclick="
-    document.querySelector('body').style.backgroundColor ='white';
-    document.querySelector('body').style.color ='black';
-    "
-    />
-    <input
-      type="button"
-      value="toggle"
-      onclick="
-    if(document.querySelector('body').dataset.mode === 'day'){
-      document.querySelector('body').style.backgroundColor ='black';
-      document.querySelector('body').style.color ='white';
-      document.querySelector('body').dataset.mode = 'night';
-    } else {
-      document.querySelector('body').style.backgroundColor ='white';
-      document.querySelector('body').style.color ='black';
-      document.querySelector('body').dataset.mode = 'day';
+      var target1 = document.querySelector('body');
+    if(this.value==='night') {
+    target1.style.backgroundColor ='black';
+    target1.style.color ='white'; 
+    this.value = 'day'; } 
+    else {
+    target1.style.backgroundColor ='white';
+    target1.style.color ='black';
+    this.value='night';
+    
+    var links = document.querySelectorAll('a');
+    var i = 0;
+    while(i<links.length) {
+      links[i].style.color = 'powderblue';
+      i=i+1;
     }
-    "
+   } "
     />
     <ol>
       <li><a href="1.html">HTML</a></li>
@@ -63,5 +55,22 @@
       and respective standard libraries, the two languages are distinct and
       differ greatly in design.
     </p>
+    <input
+      id="night_day2"
+      type="button"
+      value="night"
+      onclick=" 
+      var target = document.querySelector('body');
+    if(this.value==='night') {
+    target.style.backgroundColor ='black';
+    target.style.color ='white'; 
+    this.value = 'day'; } 
+    else {
+    document.querySelector('body').style.backgroundColor ='white';
+    document.querySelector('body').style.color ='black';
+    this.value='night' 
+    } 
+    "
+    />
   </body>
 </html>
